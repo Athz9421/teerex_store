@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Box from "@mui/material/Box";
+import Navbar from "./componenets/Navbar";
+import "./componenets/Navbar.css";
+import ProductCard from "./componenets/ProductCard";
+import Products from "./componenets/Products";
+import Filter from "./componenets/Filter";
+import Cart from "./componenets/Cart";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Box mt={10}>
+          <Navbar />
+          <Routes>
+            <Route exact path="/" element={<Products />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </Box>
+      </div>
+    </Router>
   );
 }
 
