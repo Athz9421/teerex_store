@@ -50,7 +50,7 @@ export default function Cart() {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" alignItems="center">
+     <Box display="flex" flexDirection="column" alignItems="center">
         <Typography variant="h3" className="main-heading">
           Shopping Cart
         </Typography>
@@ -69,10 +69,10 @@ export default function Cart() {
           );
         })}
 
-<Box mt={3}>
+     <Box mt={3}>
         <Divider />
         <Typography variant="h5" align="right" mt={2}>
-          Total cost: ${totalCost.toFixed(2)} {/* Using toFixed(2) to display 2 decimal places */}
+          Total cost: ${totalCost.toFixed(2)} 
         </Typography>
       </Box>
       </Box>
